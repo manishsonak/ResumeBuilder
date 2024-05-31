@@ -1,14 +1,13 @@
-
-import './App.css'
+import Body from "./Components/Body/Body";
+import Header from "./Components/Header/Header";
 
 function App() {
-
-
   return (
     <>
-          <h1>Creating Resume Builder Project</h1>
+      <Header />
+      <Body />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

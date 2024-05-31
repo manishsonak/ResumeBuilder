@@ -1,0 +1,33 @@
+.container{
+  background-color: rgb(215, 244, 255);
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    align-items: center;
+}
+.left{
+    width: 100%;
+    height: 50vh;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left h1{
+    text-align: center;
+    width: 378px;
+    font-size: 3.2rem;
+}
+.higlighted{
+    color: rgb(34, 170, 224);
+}
+.right{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* background-color: green; */
+}
