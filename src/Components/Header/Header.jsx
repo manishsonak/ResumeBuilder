@@ -1,17 +1,25 @@
-import style from "./Header.module.css";
-import logo from "../../assets/Resume.svg"
 
-const Header = () => {
+import resumeSvg from "../../assets/Resume.svg"
+
+import styles from "./Header.module.css";
+
+function Header() {
+
   return (
-    <div className={style.container}>
-      <div className={style.left}>
-            <h1>A <span className={style.higlighted}>Resume</span> that stands out! Make your own resume. <span className={style.higlighted}>it&apos;s free</span></h1>
+    <div className={styles.container}>
+      <div className={styles.left}>
+        <p className={styles.heading}>
+          A <span>Resume</span> that stands out!
+        </p>
+        <p className={styles.heading}>
+          Make your own resume. <span>It&apos;s free</span>
+        </p>
       </div>
-      <div className={style.right}>
-        <img src={logo} alt="Resume" width="500px" />
+      <div className={styles.right}>
+        <img src={resumeSvg} alt="Resume" />
       </div>
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;

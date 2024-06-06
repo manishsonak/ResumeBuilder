@@ -72,3 +72,7 @@ button:focus-visible {
   padding: 0;
   box-sizing: border-box;
 }
+
+body::-webkit-scrollbar{
+  scrollbar-width: none;
+}
