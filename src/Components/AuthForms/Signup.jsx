@@ -12,6 +12,10 @@ const Signup = () => {
     const handleSubmit=async(e)=>{
         e.preventDefault();
 
+        try {
+            
+       
+
         const response=await fetch('http://localhost:3000/auth/createuser',{
             method:'POST',
             mode: "cors",
@@ -34,6 +38,9 @@ const Signup = () => {
         else{
             alert("Invalid Credencial")
         }
+    } catch (error) {
+            alert("error Please try again later")
+    }
     }
 
 

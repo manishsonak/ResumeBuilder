@@ -13,6 +13,10 @@ const Login = () => {
     const handleSubmit= async(e)=>{
                 e.preventDefault();
 
+                try {
+                    
+               
+
                 const response=await fetch('http://localhost:3000/auth/login',{
                     method:'POST',
                     mode: "cors",
@@ -28,12 +32,16 @@ const Login = () => {
                 if(json.success){
                     //save the auth token and redirect
                     localStorage.setItem('token',json.authtoken);
-                    navigator("/")
+                    navigator("/resume")
                     window.location.reload();
                 }
                 else{
                     alert("Invalid Credencial")
                 }
+            } catch (error) {
+                    alert("Some error occur Please try again  later");
+            }
+    
     }
   return (
     <div className="container">

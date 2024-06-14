@@ -6,7 +6,6 @@ import Editor from "../Editor/Editor";
 
 import styles from "./Body.module.css";
 import Resume from "../Resume/Resume";
-import Header from "../Header/Header";
 
 function Body() {
   const colors = ["#239ce2", "#48bb78", "#0bc5ea", "#a0aec0", "#ed8936"];
@@ -62,27 +61,28 @@ function Body() {
 
   return (
     <>
-    
-    <Header/>
+    <div className={styles.head}>
+    </div>
     <div className={styles.container}>
       <p className={styles.heading}>Resume Builder</p>
       <div className={styles.toolbar}>
         <div className={styles.colors}>
-          {colors.map((item) => (
-            <span
-              key={item}
-              style={{ backgroundColor: item }}
+        {colors.map((item,index) => (
+           <div
+              key={index}
+              style={{backgroundColor:item}}
               className={`${styles.color} ${
                 activeColor === item ? styles.active : ""
               }`}
               onClick={() => setActiveColor(item)}
-            />
+              >
+              </div>
           ))}
         </div>
         <ReactToPrint
           trigger={() => {
             return (
-              <button>
+              <button >
                 Download <ArrowDown />
               </button>
             );

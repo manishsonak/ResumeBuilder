@@ -1,0 +1,53 @@
+.Container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 20px;
+    /* height: 70vh; */
+   max-width: 25%;
+   margin: 10px 30px ;
+}
+.Container img{
+    border-radius: 10px;
+}
+.Container p{
+    font-size: 1.3rem;
+   text-align: center;
+}
+.Container h2{
+   text-align: center;
+}
+.FlexBox{
+    display: flex;
+    height: 70vh;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width:900px){
+    .FlexBox{
+        height: auto;
+        flex-direction: column;
+        justify-content: space-around;
+        flex: 1;
+    }
+    .Container h2{
+       width: 300px;
+    }
+    .Container p{
+       width: 300px;
+    }
+}
+@media only screen and (min-width:1000px){
+    .FlexBox{
+        height: 90vh;
+    }
+    .Container h2{
+       width: 300px;
+    }
+    .Container p{
+       width: 300px;
+    }
+}
