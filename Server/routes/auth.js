@@ -119,8 +119,8 @@ router.post(
     "/getuser",fetchuser, async (req, res) => {
 
 try {
-    console.log(req.user.id);
-   userId=req.user.id;
+    
+    let userId=req.user.id;
     const user =await User.findById(userId).select("-password")
     res.send(user)
 } catch (error) {

@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/display-name */
 import  { forwardRef, useEffect, useRef, useState } from "react";
@@ -82,7 +83,7 @@ const Resume = forwardRef((props, ref) => {
               )}
               {item.location ? (
                 <p className={styles.date}>
-                  <MapPin /> Remote
+                  <MapPin /> {item.location}
                 </p>
               ) : (
                 <span />
@@ -90,9 +91,9 @@ const Resume = forwardRef((props, ref) => {
               {item.points?.length > 0 ? (
                 <ul className={styles.points}>
                   {item.points?.map((elem, index) => (
-                    <li className={styles.point} key={elem + index}>
-                      {elem}
-                    </li>
+                    <p className={styles.points} key={elem + index}>
+                      <h3 className={styles.point}>{elem}</h3>
+                    </p>
                   ))}
                 </ul>
               ) : (
@@ -116,7 +117,7 @@ const Resume = forwardRef((props, ref) => {
         <div className={styles.sectionTitle}>{info.project.sectionTitle}</div>
         <div className={styles.content}>
           {info.project?.details?.map((item) => (
-            <div className={styles.item} key={item}>
+            <div className={styles.item}>
               {item.title ? (
                 <p className={styles.title}>{item.title}</p>
               ) : (
@@ -146,9 +147,9 @@ const Resume = forwardRef((props, ref) => {
               {item.points?.length > 0 ? (
                 <ul className={styles.points}>
                   {item.points?.map((elem, index) => (
-                    <li className={styles.point} key={elem + index}>
-                      {elem}
-                    </li>
+                    <p className={styles.points} key={elem + index}>
+                      <h3 className={styles.point}>{elem}</h3>
+                    </p>
                   ))}
                 </ul>
               ) : (
@@ -174,7 +175,7 @@ const Resume = forwardRef((props, ref) => {
         </div>
         <div className={styles.content}>
           {info.education?.details?.map((item) => (
-            <div className={styles.item} key={item}>
+            <div className={styles.item}>
               {item.title ? (
                 <p className={styles.title}>{item.title}</p>
               ) : (
@@ -215,9 +216,9 @@ const Resume = forwardRef((props, ref) => {
           {info.achievement?.points?.length > 0 ? (
             <ul className={styles.numbered}>
               {info.achievement?.points?.map((elem, index) => (
-                <li className={styles.point} key={elem + index}>
-                  {elem}
-                </li>
+                <p className={`${styles.points} ${styles.newpoint}`} key={elem + index}>
+                 <h4 className={`${styles.point} ${styles.newpoint}`}>{elem}</h4> 
+                </p>
               ))}
             </ul>
           ) : (

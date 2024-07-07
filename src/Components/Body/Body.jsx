@@ -14,7 +14,7 @@ function Body() {
     workExp: "Work Experience",
     project: "Projects",
     education: "Education",
-    achievement: "Achievements",
+    // achievement: "Achievements",
     summary: "Summary",
     other: "Other",
   };
@@ -65,7 +65,14 @@ function Body() {
     </div>
     <div className={styles.container}>
       <p className={styles.heading}>Resume Builder</p>
-      <div className={styles.toolbar}>
+      
+      <div className={styles.main}>
+        <Editor
+          sections={sections}
+          information={resumeInformation}
+          setInformation={setResumeInformation}
+        />
+        <div className={styles.toolbar}>
         <div className={styles.colors}>
         {colors.map((item,index) => (
            <div
@@ -90,12 +97,6 @@ function Body() {
           content={() => resumeRef.current}
         />
       </div>
-      <div className={styles.main}>
-        <Editor
-          sections={sections}
-          information={resumeInformation}
-          setInformation={setResumeInformation}
-        />
         <Resume
           ref={resumeRef}
           sections={sections}
@@ -109,3 +110,5 @@ function Body() {
 }
 
 export default Body;
+
+

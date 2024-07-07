@@ -11,21 +11,30 @@
     margin-top: 30px;
     width: auto;
     height: 20vh;
-    background-image: linear-gradient(to bottom, #239ce2, #1369b9);
+    background-image: linear-gradient(to right, #BBD2C5, #536976);
   }
   
   .heading {
     color: white;
+    margin-top: 40px;
+    white-space: 20px;
+    letter-spacing: 20px;
     font-weight: 500;
-    font-size: 2.1rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
   }
   
   .toolbar {
     width: 100%;
+    height: 90px;
     display: flex;
     gap: 40px;
-    justify-content: space-between;
+    justify-content: space-around;
+    /* padding: 20px auto; */
     align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-image: linear-gradient(to top, #BBD2C5, #536976);
   }
   
   .colors {
@@ -35,6 +44,7 @@
     align-items: center;
     padding: 0 30px;
     /* background-color: red; */
+    /* backdrop-filter: blur(70px); */
   }
   
   .colors .color {
@@ -46,14 +56,14 @@
     /* background-color: #239ce2; */
   }
   .colors .active {
-    border: 2px solid #000;
+    border: 2px solid #fffefe;
   }
   
   .toolbar button {
     padding: 8px 16px;
     border-radius: 5px;
-    background-color: #239ce2;
-    color: #fff;
+    background-color: #BBD2C5;
+    color: black;
     outline: none;
     border: none;
     font-weight: 500;
@@ -72,6 +82,7 @@
   
   .main {
     display: flex;
+    margin-top: 150px;
     flex-direction: column;
     gap: 30px;
     width: 100%;

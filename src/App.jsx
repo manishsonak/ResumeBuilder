@@ -6,6 +6,7 @@ import Body from "./Components/Body/Body";
 import Header from "./Components/Header/Header";
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
 import Footer from "./Components/Footer/Footer";
+import About from "./Components/About/About";
 // import { Sections } from "./Components/Sections/Sections";
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
           <Route path="/" element={<Header/>}/>
           <Route path="/login" element={!auth?<Login />:<Body/>}/>
           <Route path="/resume" element={ <Body/>}/>
+          <Route path="/about" element={ <About/>}/>
           <Route path="/signup" element={ <Signup/>}/>
         </Routes>
         {/* {auth?null:<Sections/>} */}

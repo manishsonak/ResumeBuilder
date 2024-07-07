@@ -14,9 +14,12 @@ function Editor(props) {
   const [activeSectionKey, setActiveSectionKey] = useState(
     Object.keys(sections)[0]
   );
+
+  console.log(Object.keys(sections)[0]);
   const [activeInformation, setActiveInformation] = useState(
     information[sections[Object.keys(sections)[0]]]
   );
+  console.log(information[sections[Object.keys(sections)[0]]]);
   const [activeDetailIndex, setActiveDetailIndex] = useState(0);
   const [sectionTitle, setSectionTitle] = useState(
     sections[Object.keys(sections)[0]]
